@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'Gallery'
+  name: 'AppGallery'
 }
 </script>
 
