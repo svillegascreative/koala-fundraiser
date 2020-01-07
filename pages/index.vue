@@ -1,18 +1,15 @@
 <template lang="pug">
-  main
+  div
     h1 Christina for Koalas
     Intro
-    AppGallery
 </template>
 
 <script>
 import Intro from '~/components/intro.vue'
-import AppGallery from '~/components/AppGallery.vue'
 
 export default {
   components: {
-    Intro,
-    AppGallery
+    Intro
   }
 }
 </script>
