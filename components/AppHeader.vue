@@ -4,7 +4,9 @@
 			li
 				nuxt-link(exact to="/") About
 			li
-				nuxt-link(to="/Gallery") Gallery
+				nuxt-link(to="/gallery") Gallery
+			li
+				nuxt-link(to="/cart") Cart
 </template>
 
 <script>
