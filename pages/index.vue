@@ -2,14 +2,17 @@
   main
     h1 Christina for Koalas
     Intro
+    Gallery
 </template>
 
 <script>
 import Intro from '~/components/intro.vue'
+import Gallery from '~/components/gallery.vue'
 
 export default {
   components: {
-    Intro
+    Intro,
+    Gallery
   }
 }
 </script>
