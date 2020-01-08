@@ -47,10 +47,10 @@ li a {
 }
 
 p a:hover,
-p a:focus,
+/* p a:focus, */
 p a:active,
 li a:hover,
-li a:focus,
+/* li a:focus, */
 li a:active {
   @apply bg-green-200;
   transition: 0.3s all ease;
