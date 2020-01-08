@@ -1,11 +1,11 @@
 <template lang="pug">
-	nav
-		ul
-			li
+	nav.mb-6
+		ul.flex.justify-around
+			li.p-3
 				nuxt-link(exact to="/") About
-			li
+			li.p-3
 				nuxt-link(to="/gallery") Gallery
-			li
+			li.p-3
 				nuxt-link(to="/cart") Cart
 </template>
 
@@ -15,4 +15,13 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+li {
+  transition: 0.3s all ease;
+}
+
+li:hover {
+  @apply bg-green-200;
+  transition: 0.3s all ease;
+}
+</style>
