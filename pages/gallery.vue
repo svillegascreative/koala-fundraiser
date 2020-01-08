@@ -13,7 +13,7 @@ export default {
   },
   async asyncData() {
     const { data } = await axios.get(
-      `https://${process.env.CLOUDINARY_API_KEY}:${process.env.CLOUDINARY_API_SECRET}@api.cloudinary.com/v1_1/svillegas/resources/image`
+      `https://${process.env.CLOUDINARY_API_KEY}:${process.env.CLOUDINARY_API_SECRET}@api.cloudinary.com/v1_1/svillegas/resources/image/tags/koala_fundraiser?max_results=60`
     )
     return { images: data.resources }
   }
