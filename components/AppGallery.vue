@@ -3,14 +3,15 @@
 		h2 Gallery
 		div
 			ul
-				li(v-for="image in [1,2,3,4,5]")
-					img(src="https://placekitten.com/320/240")
+				li(v-for="image in images")
+					img(:src="image.secure_url")
 	
 </template>
 
 <script>
 export default {
-  name: 'AppGallery'
+  name: 'AppGallery',
+  props: { images: Object }
 }
 </script>
 
