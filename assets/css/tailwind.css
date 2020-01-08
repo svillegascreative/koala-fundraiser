@@ -1,6 +1,7 @@
 @import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-/* start base styles ----------------- */
 *,
 *:before,
 *:after {
@@ -61,7 +62,3 @@ a:active {
   @apply bg-green-200;
   transition: 0.3s all ease;
 }
-/* end base styles ----------------- */
-
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
