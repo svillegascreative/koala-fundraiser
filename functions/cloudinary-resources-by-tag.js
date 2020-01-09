@@ -8,7 +8,7 @@ const headers = {
 
 exports.handler = async (event) => {
   // Check for the right HTTP method
-  if (!event.body || event.httpMethod !== 'GET') {
+  if (!event.body || event.httpMethod !== 'POST') {
     return {
       statusCode: 400,
       headers,
