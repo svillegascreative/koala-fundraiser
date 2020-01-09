@@ -1,6 +1,4 @@
 <template lang="pug">
-	section
-		h2 Gallery
 		div
 			ul
 				li(v-for="image in images")
