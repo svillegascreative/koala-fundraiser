@@ -1,8 +1,8 @@
 <template lang="pug">
 		div
-			ul
+			ul.grid
 				li(v-for="image in images")
-					CldImage(cloud_name="svillegas" :publicId="image.public_id")
+					CldImage(cloud_name="svillegas" :publicId="image.public_id" loading="lazy")
 						CldTransformation(width="200" height="200" crop="fit" quality="auto" fetch_format="auto" dpr="auto")
 	
 </template>
@@ -20,4 +20,13 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+  grid-gap: 2rem;
+  justify-items: center;
+  align-items: center;
+}
+</style>
