@@ -4,6 +4,8 @@
 			li.p-3
 				nuxt-link(exact to="/") About
 			li.p-3
+				nuxt-link(to="/orders") Orders
+			li.p-3
 				nuxt-link(to="/gallery") Gallery
 			li.p-3
 				nuxt-link(to="/cart") Cart
