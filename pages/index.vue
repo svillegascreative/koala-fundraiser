@@ -27,8 +27,10 @@
       li watering stations for surviving animals in areas decimated by fire,
       li and projects aimed at regenerating the plant and animal life destroyed during these fires. 
 
-    h2 About Christina
-    p Christina Doherty is a young Canadian woman who's recently moved to Australia for a Master's degree, and brought her emerging photography talent with her. She is devastated by the destruction taking place in her new home, and wants to make a difference. You can keep up to date with her work and fundraising efforts via #[a(href="https://www.instagram.com/christinadphotos/") Twitter].
+    h2 About me
+    img(src="https://res.cloudinary.com/svillegas/image/upload/v1578665473/koala-fundraiser/christina.jpg").christina
+    p Hi everyone! I’m Christina. I’m a Canadian who recently moved to Australia for a Master’s degree. Upon moving here, my love for photography was rekindled as a result of Australia’s beautiful landscapes and wildlife. Devastatingly, shortly after my arrival the bushfires in Australia commenced. unseasonably early and aggressively. I am absolutely heartbroken seeing the beautiful landscapes and wildlife, which I once shot in their glory, be decimated by these unrelenting fires, and decided to find a way to help. 
+    p Thanks for stopping by, and please feel free to contact me by email with any questions, or follow me on #[a(href="https://www.instagram.com/christinadphotos/") Instagram] for more updates on this project and my work.
 </template>
 
 <script>
@@ -42,5 +44,17 @@ export default {}
   @apply mb-6;
   @apply leading-snug;
   @apply tracking-tight;
+}
+
+.christina {
+  @apply float-right;
+  @apply rounded-full;
+  max-width: 12rem;
+  @apply m-3;
+  @apply p-1;
+  @apply border-solid;
+  @apply border;
+  @apply border-green-800;
+  shape-outside: circle(50%);
 }
 </style>
