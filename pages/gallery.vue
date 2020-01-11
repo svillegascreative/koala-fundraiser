@@ -15,6 +15,10 @@ export default {
   },
   computed: {
     ...mapState(['galleryData'])
+  },
+  mounted() {
+    // TODO: figure out where to put this so it only runs once for the app
+    this.$store.commit('addImageIDs')
   }
 }
 </script>

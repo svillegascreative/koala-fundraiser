@@ -30,3 +30,11 @@ export const getters = {
     return state.cart.reduce((ac, next) => ac + next.qty * next.price, 0)
   }
 }
+
+export const mutations = {
+  addImageIDs: (state) => {
+    state.galleryData.forEach((image) => {
+      image.id = image.public_id.slice(-10, -3)
+    })
+  }
+}
