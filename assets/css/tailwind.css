@@ -63,3 +63,19 @@ li a:active {
   @apply bg-green-200;
   transition: 0.3s all ease;
 }
+
+/* forms */
+input {
+  @apply shadow-inner;
+  @apply border;
+  @apply border-gray-400;
+  @apply bg-gray-100;
+}
+
+button {
+  @apply p-3;
+  @apply m-3;
+  @apply bg-green-500;
+  @apply text-white;
+  @apply font-semibold;
+}
