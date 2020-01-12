@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     ul.grid
-      li(v-for="image in images")
+      li(v-for="image in images" :key="image.id")
         nuxt-link(:to="`/image/${image.id}`")
           CldImage(cloud_name="svillegas" :publicId="image.public_id" loading="lazy")
             CldTransformation(width="200" height="200" crop="fit" quality="auto" fetch_format="auto" dpr="auto")
