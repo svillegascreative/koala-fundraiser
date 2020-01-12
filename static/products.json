@@ -1,0 +1,17 @@
+[
+  {
+    "name": "A5 print",
+    "size": "5.8\" x 8.3\"",
+    "price": 40
+  },
+  {
+    "name": "A4 print",
+    "size": "8.3\" x 11.7\"",
+    "price": 50
+  },
+  {
+    "name": "A3 print",
+    "size": "11.7\" x 16.5\"",
+    "price": 65
+  }
+]
