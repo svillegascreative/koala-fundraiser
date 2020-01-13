@@ -2,22 +2,7 @@ import galleryData from '~/static/gallerydata.json'
 
 export const state = () => ({
   galleryData,
-  cart: [
-    {
-      id: 1,
-      img: 'url',
-      size: 'A5 print (inches)',
-      price: '40.00',
-      qty: 2
-    },
-    {
-      id: 2,
-      img: 'url',
-      size: 'A4 print (inches)',
-      price: '50.00',
-      qty: 1
-    }
-  ]
+  cart: []
 })
 
 export const getters = {
