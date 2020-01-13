@@ -25,8 +25,8 @@ export const mutations = {
   updateCart: (state, payload) => {
     let itemFound = false
     state.cart.forEach((el) => {
-      if (el.id === payload.id) {
-        el.qty = payload.qty
+      if (el.id === payload.id && el.size === payload.size) {
+        el.qty += payload.qty
         itemFound = true
       }
     })
