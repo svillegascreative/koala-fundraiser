@@ -1,6 +1,7 @@
 <template lang="pug">
   section
     h2 Gallery
+    p Click any thumbnail to view a larger image and ordering options.
     AppGallery(:images="galleryData")
 </template>
 
