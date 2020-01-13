@@ -45,7 +45,7 @@ li:hover {
   @apply justify-center;
   @apply items-center;
   @apply absolute;
-  top: 0.5rem;
-  right: -0.75rem;
+  top: 0.75rem;
+  right: -0.5rem;
 }
 </style>
