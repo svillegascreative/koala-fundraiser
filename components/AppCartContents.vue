@@ -28,7 +28,7 @@
 						td(colspan="2").font-semibold.text-lg.text-right Total:
 						td.font-semibold.text-lg.text-center.leading-none {{cartCount}}
 							br
-							span.text-sm.leading-none items
+							span.text-sm.leading-none {{cartCount == 1 ? 'item' : 'items'}}
 						td.font-semibold.text-lg.text-center {{cartTotal | dollar}}
 			div.max-w-sm.mx-auto.mt-6.flex.justify-around
 				button(@click="clearCart").minor Clear Cart
