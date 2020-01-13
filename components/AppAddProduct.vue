@@ -5,7 +5,7 @@
 		div.pl-1.flex-none
 			input(type="number" min="0" v-model="quantity" :id="inputID(product)").w-16
 		div.pl-1.flex-none
-			button(@click="updateCart(product)") Add to cart
+			button(@click="updateCart()") Add to cart
 	
 </template>
 
@@ -26,11 +26,11 @@ export default {
     inputID(product) {
       return product.name.split(' ').join('-')
     },
-    updateCart(product) {
+    updateCart() {
       if (this.quantity > 0) {
-        this.item = { ...this.item, ...this.image, ...product }
+        this.item = { ...this.item, ...this.image, ...this.product }
         this.item.qty = Number(this.quantity)
-        this.$store.commit('updateCart', this.item)
+        this.$store.commit('updateCart', { ...this.item })
       }
     }
   }
