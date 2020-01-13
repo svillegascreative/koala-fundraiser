@@ -3,23 +3,20 @@
     section.max-w-5xl.mx-auto
       img(:src="image.url").w-full
       p.font-semibold {{`#${this.id}`}}
-    table.mx-auto
-      tbody
-        tr(v-for="product in products")
-          td.pb-3.text-right {{product.name}} ({{product.size}})
-          td.pb-3.text-center
-            input(type="number" min="0" v-model="qty").w-16
-        tr
-          td
-          td
-            button(@click="updateCart") Add to cart
+    section.mx-auto.max-w-sm
+      AppAddProduct(v-for="product in products" :key="index" :product="product" :image="image")
+          
 </template>
 
 <script>
 import { mapState } from 'vuex'
+import AppAddProduct from '~/components/AppAddProduct'
 import products from '~/static/products'
 
 export default {
+  components: {
+    AppAddProduct
+  },
   data() {
     return {
       products,

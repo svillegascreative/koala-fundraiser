@@ -73,8 +73,8 @@ input {
 }
 
 button {
-  @apply p-3;
-  @apply m-3;
+  @apply px-2;
+  @apply px-3;
   @apply bg-green-500;
   @apply text-white;
   @apply font-semibold;
