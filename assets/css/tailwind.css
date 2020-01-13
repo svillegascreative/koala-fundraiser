@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
@@ -26,19 +27,19 @@ article {
 h1,
 h2 {
   @apply text-center;
-  @apply font-semibold;
   @apply leading-none;
   @apply tracking-tight;
   @apply mb-6;
   @apply text-green-800;
+  font-family: 'Patua One', serif;
 }
 
 h1 {
-  @apply text-4xl;
+  @apply text-5xl;
 }
 
 h2 {
-  @apply text-3xl;
+  @apply text-4xl;
 }
 
 p {
