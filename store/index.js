@@ -36,5 +36,15 @@ export const mutations = {
     state.galleryData.forEach((image) => {
       image.id = image.public_id.slice(-10, -3)
     })
+  },
+  updateCart: (state, payload) => {
+    let itemFound = false
+    state.cart.forEach((el) => {
+      if (el.id === payload.id) {
+        el.qty = payload.qty
+        itemFound = true
+      }
+    })
+    if (!itemFound) state.cart.push(payload)
   }
 }
