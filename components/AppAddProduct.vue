@@ -29,7 +29,7 @@ export default {
     updateCart(product) {
       if (this.quantity > 0) {
         this.item = { ...this.item, ...this.image, ...product }
-        this.item.qty = this.quantity
+        this.item.qty = Number(this.quantity)
         this.$store.commit('updateCart', this.item)
       }
     }
