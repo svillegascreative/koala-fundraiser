@@ -27,5 +27,8 @@ export const mutations = {
       (el) => el.id === payload.id && el.size === payload.size
     )
     itemFound ? (itemFound.qty += payload.qty) : state.cart.push(payload)
+  },
+  clearCart: (state) => {
+    state.cart = []
   }
 }

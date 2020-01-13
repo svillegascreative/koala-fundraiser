@@ -73,9 +73,18 @@ input {
 }
 
 button {
-  @apply px-2;
+  @apply py-1;
   @apply px-3;
-  @apply bg-green-500;
+  @apply bg-green-700;
   @apply text-white;
   @apply font-semibold;
+  @apply rounded;
+}
+
+button.minor {
+  @apply bg-green-600;
+}
+
+button:active {
+  @apply bg-green-800;
 }

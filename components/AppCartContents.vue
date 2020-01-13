@@ -9,7 +9,7 @@
 					tr
 						th.border-b.border-gray-800.px-3 Print
 						th.border-b.border-gray-800.px-3 Price
-						th.border-b.border-gray-800.px-3 Quantity	
+						th.border-b.border-gray-800.px-3 Quantity
 						th.border-b.border-gray-800.px-3 Cost
 				tbody
 					tr(v-for="item in cart" :key="item.id")
@@ -30,6 +30,9 @@
 							br
 							span.text-sm.leading-none items
 						td.font-semibold.text-lg.text-center {{cartTotal | dollar}}
+			div.max-w-sm.mx-auto.mt-6.flex.justify-around
+				button(@click="clearCart").minor Clear Cart
+				button Proceed to Checkout
 </template>
 
 <script>
@@ -39,6 +42,11 @@ export default {
   computed: {
     ...mapState(['cart']),
     ...mapGetters(['cartCount', 'cartTotal'])
+  },
+  methods: {
+    clearCart() {
+      this.$store.commit('clearCart')
+    }
   }
 }
 </script>
