@@ -14,11 +14,11 @@ export default {
   name: 'AppAddProduct',
   props: {
     image: Object,
-    product: Object,
-    quantity: Number
+    product: Object
   },
   data() {
     return {
+      quantity: 0,
       item: {}
     }
   },
@@ -27,11 +27,11 @@ export default {
       return product.name.split(' ').join('-')
     },
     updateCart(product) {
-      // if (this.quantity > 0) {
-      this.item = { ...this.image, ...product }
-      this.item.qty = this.quantity
-      this.$store.commit('updateCart', this.item)
-      // }
+      if (this.quantity > 0) {
+        this.item = { ...this.item, ...this.image, ...product }
+        this.item.qty = this.quantity
+        this.$store.commit('updateCart', this.item)
+      }
     }
   }
 }
