@@ -3,13 +3,14 @@ require('dotenv').config()
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 const headers = {
   'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'Content-Type'
+  'Access-Control-Allow-Headers': 'Content-Type',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS'
 }
 
-exports.handler = async (event, callback) => {
+exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return {
-      statusCode: 400,
+      statusCode: 405,
       headers,
       body: JSON.stringify({
         status: 'Invalid HTTP method'
@@ -39,7 +40,6 @@ exports.handler = async (event, callback) => {
       amount: data.stripeAmt,
       currency: data.stripeCurrency,
       payment_method_types: ['card'],
-      customer: 'Stripe Test Customer',
       description: 'Koala Fundraiser payment'
     })
 
